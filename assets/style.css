@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --dark: rgb(20, 22, 38);
     --light: rgb(254, 182, 75);
@@ -18,17 +24,22 @@ header {
 
 h1 {
     color: var(--light);
+    margin: 30px;
 }
 
 h5 {
     color: white;
+    font-size: 18px;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -81,7 +92,7 @@ pre {
     position: relative;
     top: -26px;
     font-size: 15px;
-    user-select: text;
+    user-select: all;
 }
 
 .cards:hover {
