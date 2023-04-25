@@ -28,14 +28,22 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .cards {
     flex: 1 1 300px;
+    max-width: 400px;
     border-style: dashed;
     border-color: whitesmoke;
     margin: 20px;
     padding: 25px;
+}
+
+.cards,
+h2 {
+    transition: all 0.5s ease-in-out;
 }
 
 h2 {
@@ -43,17 +51,20 @@ h2 {
     background-color: var(--dark);
     border-style: solid;
     border-color: whitesmoke;
-    border-radius: 2px;
-    width: 300px;
+    border-radius: 7px;
     padding: 5px;
     position: relative;
     top: -45px;
     margin: auto;
+    font-size: 35px;
 }
 
 p {
     color: var(--light);
     margin: auto;
+    position: relative;
+    top: -36px;
+    font-size: 20px;
 }
 
 pre {
@@ -63,11 +74,23 @@ pre {
         );
     color: whitesmoke;
     margin: auto;
-    width: 300px;
     display: flex;
     justify-content: flex-start;
-    min-height: 100px;
-    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+    top: -26px;
+    font-size: 15px;
+    user-select: text;
+}
+
+.cards:hover {
+    box-shadow: 10px 10px 5px var(--light);
+    border-color: var(--light);
+}
+
+h2:hover {
+    border-color: var(--light);
 }
 
 footer {
@@ -76,3 +99,13 @@ footer {
     padding: 2%;
     color: var(--light)
 }
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    main {
+      max-width: 1200px;
+    }
+  }
